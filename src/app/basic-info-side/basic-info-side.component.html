@@ -1,0 +1,46 @@
+
+<div class="card">
+    <div class="status"(click)="setActiveSection(1)" >
+        <p class="num"[class.active]="activeSectionIndex === 1">{{ activeSectionIndex === 1? '1' : ''}}</p>
+        <p class="num-1"[class.active]="activeSectionIndex === 1">{{ activeSectionIndex === 1? '' : '✔'}}</p>
+        <i class="pi pi-circle" style="font-size: 2.3rem"[class.active]="activeSectionIndex === 1"></i>
+        <p [class.active]="activeSectionIndex === 1">Basic Information</p>
+       
+    </div>
+    <div class="vertical-line">&nbsp;</div>
+
+    <div class="status"(click)="setActiveSection(2)" >
+        <p class="num"[class.active]="activeSectionIndex === 2">{{ (activeSectionIndex == 1)||(activeSectionIndex == 2)? '2' : '' }}</p>
+        <p class="num-1"[class.active]="activeSectionIndex === 2">{{ (activeSectionIndex == 1)||(activeSectionIndex == 2)? '' : '✔' }}</p>
+        <i class="pi pi-circle" style="font-size: 2.3rem"[class.active]="activeSectionIndex === 2"></i>
+        <p [class.active]="activeSectionIndex === 2">Address Information</p>
+        
+    </div>
+    <div class="vertical-line">&nbsp;</div>
+ 
+    <div class="status"(click)="setActiveSection(3)" >
+        <p class="num"[class.active]="activeSectionIndex === 3">{{ (activeSectionIndex == 1)||(activeSectionIndex == 2)||(activeSectionIndex == 3)? '3' : '' }}</p>
+        <p class="num-1"[class.active]="activeSectionIndex === 3">{{ (activeSectionIndex == 1)||(activeSectionIndex == 2)||(activeSectionIndex == 3)? '' : '✔' }}</p>
+        <i class="pi pi-circle" style="font-size: 2.3rem"[class.active]="activeSectionIndex === 3"></i>
+        <p [class.active]="activeSectionIndex === 3">Contact  & Administrator Details</p>
+        
+    </div>
+    <div class="vertical-line">&nbsp;</div>
+    
+    <div class="status"(click)="setActiveSection(4)" >
+        <p class="num" [class.active]="activeSectionIndex === 4">{{ (activeSectionIndex == 1)||(activeSectionIndex == 2)||(activeSectionIndex == 3)||(activeSectionIndex == 4)? '4' : '' }}</p>
+        <p class="num-1" [class.active]="activeSectionIndex === 4">{{ (activeSectionIndex == 1)||(activeSectionIndex == 2)||(activeSectionIndex == 3)||(activeSectionIndex == 4)? '' : '✔' }}</p>
+        <i class="pi pi-circle" style="font-size: 2.3rem" [class.active]="activeSectionIndex === 4"></i>
+        <p [class.active]="activeSectionIndex === 4">Display & Locale Settings</p>
+        
+    </div>
+    <div class="vertical-line">&nbsp;</div>
+   
+    <div class="status"(click)="setActiveSection(5)" >
+        <p class="num" [class.active]="activeSectionIndex ===5 ">5</p>
+        <i class="pi pi-circle" style="font-size: 2.3rem" [class.active]="activeSectionIndex ===5 "></i>
+        <p [class.active]="activeSectionIndex ===5 ">Review & Submit</p>
+     
+        
+    </div>
+</div>

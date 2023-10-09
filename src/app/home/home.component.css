@@ -1,0 +1,23 @@
+
+.top{
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:9999;
+}
+
+.bottom{
+    /* position: absolute; */
+   display: flex;
+    align-items: start;
+    margin-block-start: 83px;
+    /* justify-content: space-around; */
+    
+    
+}
+
+.route{
+    margin-inline-start: 77px;
+    
+}

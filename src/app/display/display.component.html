@@ -1,0 +1,76 @@
+<div class="body">
+    <p-toast position="bottom-center" ></p-toast>
+    
+    <form [formGroup]="display" (ngSubmit)="next()">
+        <div class="box">
+            <div class="top">
+                <h1>4.Display Settings & Locale Settings</h1>
+                <div class="btn-2">
+               
+                    <button class="btn-previous" (click)="pre()"><i class="pi pi-angle-left"></i>Previous</button>
+                    <button class="btn-next"type="submit">Next<i class="pi pi-angle-right"></i></button>
+               
+                </div>
+            </div>
+            <div class="bottom">
+                <div>                
+                    <h3>Display Settings</h3>
+                </div><br>
+                <div class="display-date">
+                    <div class="display">
+                        <label for="">Name to be displayed</label>
+                        <input pInputText  formControlName="Displayname" style="width: 540px;">
+                    </div>
+                    <div class="date">
+                        <label>Date Format</label>
+                        <p-dropdown
+                        
+                        [options]="Date"
+                        formControlName="Date"
+                        optionLabel="name"
+                        placeholder="Select"
+                        [style]="{'width': '540px'}"
+                      ></p-dropdown>
+                    </div>
+                </div>
+                <div>   <br> <br>            
+                    <h3>Time Format</h3>
+                </div><br>
+                <div class="display-date">
+                  
+                    <app-radio-button></app-radio-button>
+                </div><br><br>
+                <div>                
+                    <h3>Locale Settings</h3>
+                </div><br>
+                <div class="display-date">
+                    <div class="display">
+                        <label for="">Country/Region</label>
+                        <p-dropdown
+                     
+                        [options]="countries2"
+                        formControlName="country2"
+                        optionLabel="name"
+                        placeholder="Select"
+                        [style]="{'width': '540px'}"
+                      ></p-dropdown>
+                    </div>
+                    <div class="date">
+                        <label>Time Zone</label>
+                        
+                        <p-dropdown
+                         
+                          [options]="Time"
+                          formControlName="Time"
+                          optionLabel="name"
+                          placeholder="Select"
+                          [style]="{'width': '540px'}"
+                        ></p-dropdown>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+  

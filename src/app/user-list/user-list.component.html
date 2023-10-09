@@ -1,0 +1,48 @@
+<div class="body"> 
+    <div class="company-details">
+        <div class="company-details-one">
+           
+            <div >
+                
+                <h1>Organizations</h1>
+                <p style=" font-family: 'Myfont';font: size 14px;color:#092C4C;font: weight 400px;" *ngIf="CompanyList">Total: {{CompanyList.length}} Companies</p>
+               
+            </div>
+            <div class="buttons">
+                <button pButton type="button"class="bulk-button" >Bulk button</button>
+        
+                <button pButton type="button" (click)="addcompany()" icon="pi pi-plus" iconPos="left"class="add-company-btn"> &nbsp; &nbsp;Add company</button>
+            </div>
+
+        </div>
+    </div>
+    <br><br>
+    <div class="company-detail-down"  >
+        <p-progressSpinner *ngIf="loading" class="loading"></p-progressSpinner>
+        <div class="card" *ngFor="let item of CompanyList">
+            
+            <div class="top">
+                <div class="user-photo-name">
+                <img class="user-photo"src="https://cdn.dev.zoolwork.com/Files/download-image?id={{item.basicDetails.logo}}" alt="User Photo">
+                    <div class="user-name-username">
+                        <div class="user-name">{{item.basicDetails.companyName.en.name}}</div>
+                        <div class="user-username">{{item.addresses.addresses[0].city}} {{item.addresses.addresses[0].state}} </div>
+                    </div>
+                </div> 
+                <a><i class="pi pi-ellipsis-v"></i></a>
+                  
+                
+
+
+            </div>
+           
+            <div class="bottom">
+                <div class="user-description">
+                    Description will shown in one are tow line about settings...
+                </div>
+                <a class="con-set">configure setting</a>
+            </div>
+        </div>
+        
+    </div>
+</div>

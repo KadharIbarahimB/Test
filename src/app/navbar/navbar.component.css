@@ -1,0 +1,21 @@
+nav{
+    /* position: fixed; */
+    display: flex;
+    width: Fill (1,280px);
+height: Fixed (72px);
+padding: 16px;
+
+
+justify-content: space-between;
+border-style:solid ;
+border-width: 1px;
+border: 2px solid #ccc;
+background-color: white;
+
+}
+
+.right{
+    display: flex;
+    gap:25px;
+    align-items: center;
+}

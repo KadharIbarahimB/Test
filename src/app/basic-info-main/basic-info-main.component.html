@@ -1,0 +1,115 @@
+<div class="body">
+    
+    <form (ngSubmit)="next()"[formGroup]="CompanyDetails">
+    <div class="box">
+        <div class="top">
+            <h1>1. Basic Information</h1>
+            <div class="btn-2">
+           
+                <button class="btn-previous" [disabled]="true"><i class="pi pi-angle-left"></i>Previous</button>
+                <button class="btn-next"type="submit">Next<i class="pi pi-angle-right"></i></button>
+           
+            </div>
+        </div>
+
+    <div class="bottom">
+       
+        <div class="photo-dis">
+            <div class="photo">
+                
+                <div class="photo-pos" >
+                    
+                     
+                    <div class="up-btn">
+                        <p-toast position="bottom-center" ></p-toast>
+                        <input type="file" (change)="onFileSelected($event)" accept="image/*" id="file"/>
+                        <label for="file"class="img-up" ><i class="pi pi-upload"></i>&nbsp; Upload</label>
+                        <img *ngIf="imageUrl2" [src]="imageUrl2" alt="Uploaded Image" />
+                        <div *ngIf="imageUrl2"class="change">
+                            <input type="file" (change)="onFileSelected($event)" accept="image/*" id="file1"/>
+                            <label  for="file1"class="img-up-1">change</label>
+                          </div>
+                    </div>
+             
+                
+                </div>
+            </div>
+            <p style="margin-inline-start:35px">Here, you can upload your company’s logo. To do this, click the Upload your logo button, select the image file and upload it. The company logo will be displayed in the payslip template. Preferred Size: 240 x 240 pixels with 72 DPI. Maximum File Size: 1MB.</p>
+        </div>
+        
+        <div style="display:flex; flex-direction:column;gap:10px"> 
+            <div style="display:flex; gap:160px">
+                <div class="com-name-ip">
+                    <label class="Company-name" for="CompanyName">Company name</label>
+                    <input pInputText type="text" class="p-inputtext-lg" formControlName="CompanyName" id="CompanyName"/>
+                  
+                   
+                      <div *ngIf="CompanyDetails.get('CompanyName')?.hasError('minlength') && CompanyDetails.get('CompanyName')?.touched">
+                        <p-message severity="error" text="Field is required"></p-message>
+                      </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:10px;position:absolute;margin-inline-start:570px">
+                    <label class="Company-name">Company name in other languages - Optional</label>
+                    <p-multiSelect
+                    [options]="Languages"
+                    defaultLabel="Select a Language"
+                    optionLabel="name"
+                    display="chip"
+                    formControlName="Language"
+                    (onChange)="onLanguageChange($event.value)"
+                    [style]="{'width': '525px', 'height': '45px'}"
+                    [filter]="false"
+                  ></p-multiSelect>
+                
+                  <div formArrayName="languageInputs" style="display:flex;flex-direction:column;gap:10px">
+                    <div *ngFor="let control of languageInputsArray.controls; let i = index"  style="display: flex; align-items:center;gap:5px">
+                      <div class="label-1">
+                      <label style="position:absolute;margin-block-start:10px;margin-inline-start:-20px"> {{ Languages[i]?.name }}</label>
+                  </div >
+                      <input pInputText [formControlName]="i"  [style]="{'width': '375px', 'height': '45px',}">
+                    </div>
+                  </div>
+                    
+                </div>
+            </div>
+           
+           
+        <br><br><br><br>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+                <label class="Company-name">Industry</label>
+                
+                <p-dropdown [options]="Industries"  placeholder="Select a Industry"  optionLabel="name" formControlName="industry" [style]="{'width': '1100px'}" ></p-dropdown>
+                
+            </div>
+           
+            <div style="display:flex;flex-direction:column;gap:10px">
+                <label class="Company-name">Website URL</label>
+                <input pInputText  style="height: 44px;width:1100px;"formControlName="WebsiteURL"/>
+                
+                <div *ngIf="CompanyDetails.get('WebsiteURL')?.hasError('pattern') && CompanyDetails.get('WebsiteURL')?.touched">
+                    <p-message severity="error" text="Enter a valid URL"></p-message>
+                  </div>
+            </div>
+         
+            <div style="display:flex; gap:160px">
+                <div class="com-name-ip">
+                    <label class="Company-name">Tax ID</label>
+                    <input pInputText type="text" class="p-inputtext-lg"formControlName="TaxID"/>
+                    <div *ngIf="CompanyDetails.get('TaxID')?.hasError('pattern') && CompanyDetails.get('TaxID')?.touched">
+                        <p-message severity="error" text="Enter a valid Tax ID"></p-message>
+                      </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:10px;">
+                    <label class="Company-name">Company ID</label>
+                    <input pInputText type="text" class="p-inputtext-lg"formControlName="CompanyID"/>
+                    <div *ngIf="CompanyDetails.get('CompanyID')?.hasError('pattern') && CompanyDetails.get('CompanyID')?.touched">
+                        <p-message severity="error" text="Enter a valid Company ID"></p-message>
+                      </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+nav{
+   
+height: 50px;
+padding: 16px, 24px, 16px, 24px;
+display: flex;
+background-color: white;
+align-items: center;
+gap:15px;
+
+}
+h1{
+    font-family: "myfont";
+font-size: 20px;
+font-weight: 700;
+line-height: 32px;
+letter-spacing: 0em;
+text-align: left;
+margin-block-start: 7.5px;
+}
+i{
+    margin-inline-start: 10px;
+}

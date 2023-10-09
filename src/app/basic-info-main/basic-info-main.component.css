@@ -1,0 +1,264 @@
+.top{
+    display: flex;
+    justify-content: space-between;
+    width: 1130px;
+height: 70px;
+padding: 16px, 24px, 16px, 24px;
+align-items: center;
+
+}
+.btn-2{
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    gap:20px;
+    margin-inline-end: 30px;
+}
+.body{
+  
+    width: 1150px;
+height: 650px;
+border-radius: 8px;
+gap: 24px;
+margin-inline-start: 16px;
+background-color: white;
+/* margin-block-start:100px ; */
+}
+h1{
+    font-family: "myfont";
+font-size: 20px;
+font-weight: 700;
+line-height: 32px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+p-button{
+    font-family: "myfont"
+}
+.photo{
+    
+    width: 140px;
+height: 140px;
+/* padding: 8px; */
+border-radius: 8px;
+border: 1px ;
+gap: 8px;
+border-style: dotted;
+justify-content: center;
+
+
+
+}
+.photo-dis{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 130px;;
+
+    
+}
+p{
+    font-family: "myfont";
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+width: 601px;
+height: 72px;
+color: #092C4C;
+
+
+}
+.input-box{
+    width: 100px;
+}
+.photo-pos{
+    display: flex;
+    margin-block-start: 35px;
+    /* margin-inline-start: 8px; */
+    flex-direction: column;
+    /* position: relative; */
+    /* justify-content: center;
+    align-items: center;
+    align-content: center; */
+}
+ .btn-next{
+    display: flex;
+   background: #514EF3;
+    color: white;
+    width: 90px;
+height: 40px;
+padding: 8px, 13px, 8px, 16px;
+border-radius: 4px;
+gap: 8px;
+border:none;
+justify-content: center;
+align-items: center;
+
+ }
+ .btn-previous{
+    background: #ffffff;
+    display: flex;
+    width: 110px;
+height: 40px;
+padding: 8px, 13px, 8px, 16px;
+border-radius: 4px;
+gap: 8px;
+color:#D6E1E6;
+justify-content: center;
+align-items: center;
+
+ }
+ .p-inputtext-lg{
+    width: 530px;
+    height: 40px;
+ }
+ .com-name-ip{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width: 411px;
+height: 69px
+
+
+ }
+ .Company-name{
+    font-family: "myfont";
+font-size: 14px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0em;
+
+color:  #092C4C;
+ }
+ .box{
+    
+margin-inline-start: 20px;
+background-color: #ffffff;
+height: 650px;
+
+/* border-radius:21px */
+
+ }
+ .btn-lang{
+    background: 
+    #D6E1E6;
+    width: 125px;
+height: 46px;
+padding: 8px, 13px, 8px, 16px;
+border-radius: 4px;
+gap: 8px;
+color: #7E92A2;
+
+border: none;
+ }
+ .p-inputtext-lg-1
+ {
+    width: 500px;
+    height: 40px;
+ }
+ .lang-grp{
+    display: flex; 
+    flex-direction:column;
+    width:530px;
+    margin-inline-start: 570px;
+    gap:10px
+ }
+ .bottom{
+    display: flex;
+flex-direction: column;
+gap:10px
+ }
+ img{
+    position: absolute;
+    height:133px; 
+    width:133px;
+    left:360px;
+    top:138px;
+    border-radius: 8px;
+    border: 1px solid rgb(0, 0, 0);
+  
+ }
+ app-slecte-language{
+    position: absolute;
+    margin-block-start: 22px;
+ }
+
+input[type="file"]{
+    display: none;
+   
+
+}
+.img-up{
+    display: flex;
+    height: 36px;
+    width: 120px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+  margin-inline-start: 9px;
+  margin-block-start: 15px;
+    color: #fff;
+    border: none ;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); 
+color: #092C4C;
+align-items: center;
+justify-content: center;
+font-family: "myfont";
+
+}
+.up-btn{
+    display: flex;
+    margin-inline-end: 4px;
+    border-radius: 4px;
+}
+
+.img-up:hover{
+    background-color: rgba(182, 180, 180, 0.925);
+}
+p-message
+{
+position: absolute;
+}
+.label-1{
+    
+    width: 146px;
+height: 45px;
+padding: 10px, 20px, 10px, 20px;
+border-radius: 8px;
+border: 1px;
+opacity: 0.5px;
+border: 1px solid #D6E1E6;
+background-color: #D6E1E6;
+justify-content: center;
+font-family: "myfont";
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+justify-content: center;
+color: #7E92A2;
+}
+.change{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 138px;
+    height: 45px;
+  margin-block-start: 59px;
+  border-radius: 0px 0px 10px 10px;
+  justify-content: center;
+   
+    
+}
+.img-up-1{
+margin-inline-start: 40px;
+margin-block-start: 10px;
+font-family: "myfont";
+width: 138px;
+height: 45px;
+}

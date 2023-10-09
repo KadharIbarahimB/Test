@@ -1,0 +1,11 @@
+<!-- <div *ngFor="let item of sidebar" [class.active]="isClassApplied" (click)="toggleClass()" >
+    <i class="pi {{item.icon}}" ></i>
+    <p >{{item.name}}</p>
+   
+</div> -->
+
+<div *ngFor="let item of sidebar"(click)="change(item.id)"    [ngClass]="{'active': item.id === activeItemId}" >
+     <i class="pi {{item.icon}}" ></i>
+    <p >{{item.name}}</p>
+   
+</div>

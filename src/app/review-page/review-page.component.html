@@ -1,0 +1,190 @@
+<div class="body">
+  <div class="box">
+      <div class="top">
+          <h1>05.Review & Finish</h1>
+          <div class="btn-2">
+              <button class="btn-previous" (click)="pre()"><i class="pi pi-angle-left"></i>Previous</button>
+              <button class="btn-next" type="submit" (click)="sendDataToApi()">Finish<i class="pi pi-angle-right"></i></button>
+          </div>
+      </div>
+      <div class="top-1">
+          <img src="{{this.datashare.image}}" style="width: 80px; height: 80px; border-radius: 60px">
+          <div>
+              <h2 style="font-family: myfont; font-size: 24px; font-weight: 700; line-height: 40px; letter-spacing: 0em; text-align: left;">{{ this.datashare.CompanyName }}</h2>
+              <p></p>
+              <p style="background-color: #C6E2F8; color: #058AEA; border-radius: 40px;">&nbsp;&nbsp;{{ this.datashare.Industry.name }}&nbsp;&nbsp;</p>
+          </div>
+      </div>
+      <div class="top-2">
+          <div>
+              <div style="display: flex; justify-content: space-between">
+                  <div class="img-info">
+                      <img src="./assets/house.png">
+                      <h3>Basic Information</h3>
+                  </div>
+                  <div><button style="background-color: white; border: none" (click)="edit(1)"><i class="pi pi-file-edit"></i></button></div>
+              </div>
+              <br>
+              <div class="top-2-1">
+                  <div>
+                      <div>
+                          <h4>Company name</h4>
+                          <p>{{ this.datashare.CompanyName }}</p>
+                      </div>
+                      <div>
+                          <h4>Website URL</h4>
+                          <p>{{ this.datashare.WebsiteUrl }}</p>
+                      </div>
+                  </div>
+                  <div>
+                      <div>
+                          <h4>Industry</h4>
+                          <p>{{ this.datashare.Industry.name }}</p>
+                      </div>
+                      <div>
+                          <h4>Tax ID</h4>
+                          <p>{{ this.datashare.TaxId }}</p>
+                      </div>
+                  </div>
+                  <div>
+                      <div>
+                          <h4>Company name (in )</h4>
+                          <p>{{ this.datashare.arabic }}</p>
+                      </div>
+                      <div>
+                          <h4>Company Id</h4>
+                          <p>{{ this.datashare.CompanyId }}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="top-3">
+          <div>
+              <div>
+                  <div style="display: flex; justify-content: space-between">
+                      <div class="img-info">
+                          <img src="./assets/Person.png">
+                          <h3>Address Information</h3>
+                      </div>
+                      <div><button style="background-color: white; border: none" (click)="edit(2)"><i class="pi pi-file-edit"></i></button></div>
+                  </div>
+                  <br>
+                  <div>
+                      <div>
+                          <h5>Legal Address</h5>
+                          <div>
+                              <h4>Address</h4>
+                              <p>{{ this.datashare.addressline1 }}, {{ this.datashare.city }}, {{ this.datashare.state }}, {{ this.datashare.country }}, {{ this.datashare.pincode }}</p>
+                          </div>
+                      </div>
+                      <div *ngIf="this.datashare.Paddressline1">
+                          <h5>Permanent Address</h5>
+                          <div>
+                              <h4>Address</h4>
+                              <p>{{ this.datashare.Paddressline1 }}, {{ this.datashare.Pcity }}, {{ this.datashare.Pstate }}, {{ this.datashare.Pcountry }}, {{ this.datashare.Ppincode }}</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="top-4">
+          <div>
+              <div style="display: flex; justify-content: space-between">
+                  <div class="img-info">
+                      <img src="./assets/Phone.png">
+                      <h3>Contact & Administrator Details</h3>
+                  </div>
+                  <div><button style="background-color: white; border: none" (click)="edit(3)"><i class="pi pi-file-edit"></i></button></div>
+              </div>
+              <br>
+              <div>
+                  <h5>Primary Contact</h5>
+                  <div style="display: flex; justify-content: space-between">
+                      <div>
+                          <h4>Contact person</h4>
+                          <p>{{ this.datashare.Name }}</p>
+                      </div>
+                      <div>
+                          <h4>Contact Number</h4>
+                          <p>{{ this.datashare.phonenumber }}</p>
+                      </div>
+                      <div style="margin-inline-end: 80px;">
+                          <h4>Contact Email</h4>
+                          <p style="width: 10px;">{{ this.datashare.email }}</p>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                  <h5>Administrator Contact</h5>
+                  <div style="display: flex; justify-content: space-between">
+                      <div>
+                          <h4>Contact person</h4>
+                          <p>{{ this.datashare.AName }}</p>
+                      </div>
+                      <div>
+                          <h4>Contact Number</h4>
+                          <p>{{ this.datashare.Aphonenumber }}</p>
+                      </div>
+                      <div style="margin-inline-end: 80px;">
+                          <h4>Contact Email</h4>
+                          <p style="width: 10px;">{{ this.datashare.Aemail }}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="top-5">
+          <div>
+              <div style="display: flex; justify-content: space-between">
+                  <div class="img-info">
+                      <img src="./assets/Setting.png">
+                      <h3>Display & Local Settings</h3>
+                  </div>
+                  <div><button style="background-color: white; border: none" (click)="edit(4)"><i class="pi pi-file-edit"></i></button></div>
+              </div>
+              <br>
+              <div>
+                  <h5>Display Settings</h5>
+                  <div style="display: flex; justify-content: space-between">
+                      <div>
+                          <h4>Name to be displayed</h4>
+                          <p>{{ this.datashare.Displayname }}</p>
+                      </div>
+                      <div>
+                          <h4>Date Format</h4>
+                          <div *ngIf="this.datashare.Date.code === '1'">
+                              <p>{{ today | date:'dd-mm-yy' }}</p>
+                          </div>
+                          <div *ngIf="this.datashare.Date.code === '2'">
+                              <p>{{ today | date:'yy-mm-dd' }}</p>
+                          </div>
+                          <div *ngIf="this.datashare.Date.code === '3'">
+                              <p>{{ today | date:'MM-yy-dd' }}</p>
+                          </div>
+                      </div>
+                      <div>
+                          <h4>Time Format</h4>
+                          <p>{{ this.datashare.TimeFormate }}</p>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                  <h5>Local Settings</h5>
+                  <div style="display: flex; justify-content: space-between">
+                      <div>
+                          <h4>Country/Region</h4>
+                          <p>{{ this.datashare.country2.name }}</p>
+                      </div>
+                      <div>
+                          <h4 style="margin-inline-end: 60px;">Time Zone</h4>
+                          <p>{{ this.datashare.Time.name }}</p>
+                      </div>
+                      <div></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

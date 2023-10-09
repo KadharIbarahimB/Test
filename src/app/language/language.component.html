@@ -1,0 +1,16 @@
+
+<!-- <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown> -->
+<!-- <button pButton type="button" label="Click" ></button>
+<p-button label="Click" ></p-button> -->
+<!-- <p-dropdown [options]="cities" [(ngModel)]="selectedCity2" [editable]="true" optionLabel="name"></p-dropdown> -->
+ 
+  
+<div>
+ <img src="./assets/lang.svg">
+ <select [(ngModel)]="selectedLanguage" (change)="changeLanguage()" tabindex="-1">
+    <option *ngFor="let option of languageOptions" [value]="option.code">
+      {{ option.label }}
+    </option>
+  </select>
+</div>
+

@@ -1,0 +1,10 @@
+div{
+   
+    display: flex;
+    width: Fixed (75px);
+    border: 2px solid #ccc;
+    border-top: none;
+    height: 100vh;
+    position: fixed;
+}
+

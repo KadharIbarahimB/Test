@@ -1,0 +1,30 @@
+div{
+    display: flex;
+    /* margin-block-start:24px ;  */
+    /* margin-inline-start: 24px; */
+    
+}
+.top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:9999;
+}
+.body{
+    background-color: #F6FAFD;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+.bottom{
+    margin-block-start: 70px;
+}
+app-basic-info-side{
+    position: fixed;
+}
+.main{
+    margin-inline-start: 320px;
+}
