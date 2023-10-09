@@ -42,7 +42,7 @@ export class DataShareService {
    public Pcountry:any=""
    public Ppincode:any=""
    
-
+//this is to get active sction section from current page and send to side nav
    private activeSectionIndexSubject = new BehaviorSubject<number>(1);
    activeSectionIndex$: Observable<number> = this.activeSectionIndexSubject.asObservable();
  
@@ -51,12 +51,12 @@ export class DataShareService {
    }
    private activeStepSubject = new BehaviorSubject<number>(1);
   activeStep$ = this.activeStepSubject.asObservable();
-
+//this is to send active section to change when click next 
   setActiveStep(step: number) {
     this.activeStepSubject.next(step);
   }
   constructor(private httpClient: HttpClient) { }
-
+//this function get api to post
   postDataToApi(data: any): Observable<any> {
     const apiUrl = 'https://company.dev.zoolwork.com/api/company/companies';
     const headers = new HttpHeaders({

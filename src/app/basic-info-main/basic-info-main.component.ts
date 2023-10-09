@@ -33,9 +33,7 @@ export class BasicInfoMainComponent  {
   activeStep: any;
   constructor(private messageService: MessageService,private formBuilder : FormBuilder,public datashare:DataShareService,private router:Router) 
   {     
-    this.datashare.activeStep$.subscribe(step => {
-      this.activeStep = step;
-    });
+ 
     
     this.Industries = [
       { name: 'Food industry', code: '1' },
@@ -64,7 +62,7 @@ this.languageInputsArray = this.CompanyDetails.get('languageInputs') as FormArra
     
       
      
-    
+     // To Add dynamic inputs with validators when Multi selector selcted
 
   onLanguageChange(selectedLanguages: any[]) {
     const languageInputsArray = this.CompanyDetails.get('languageInputs') as FormArray;
@@ -73,13 +71,14 @@ this.languageInputsArray = this.CompanyDetails.get('languageInputs') as FormArra
       this.languageInputsArray.removeAt(0);
     }
 
-    // Add dynamic inputs with validators
+ 
     selectedLanguages.forEach(() => {
       // Add required validator and other validators as needed
       this.languageInputsArray.push(this.formBuilder.control('', [Validators.required, Validators.pattern(/[\u0600-\u06FF]+/)]));
     });
     this.selectedLanguages1=selectedLanguages
   }
+  //To get value of dynamic input values
   getDynamicInputValues() {
     const inputValues: any[] = [];
     const languageInputsArray = this.CompanyDetails.get('languageInputs') as FormArray;
@@ -100,7 +99,7 @@ if((this.CompanyDetails.value.CompanyName=="")||(this.CompanyDetails.value.Websi
 (this.CompanyDetails.value.industry==""))
 {
   
-
+//error message to show if input not filled
   this.messageService.add({ severity: 'error', summary: 'Error', detail: 'you must provide the following fields before continuing' });
   console.log(this.selectedLanguages1)
 
@@ -119,7 +118,7 @@ else{
  
   this.getDynamicInputValues();
  
-  this.datashare.setActiveSection(2);
+  this.datashare.setActiveSection(2);//To active next session when click next
 
 this.router.navigate(['addressInfo']);
 
@@ -127,6 +126,7 @@ this.router.navigate(['addressInfo']);
 
 }
 }
+//image to upload not more than 1mb
 imageUrl2: string | ArrayBuffer | null = null;
 maxFileSize= 1024 * 1024;
   onFileSelected(event: any) {
@@ -143,7 +143,7 @@ maxFileSize= 1024 * 1024;
       }
     }
   }
-
+//to preview image
   previewImage(file: File) {
     const reader = new FileReader();
     reader.readAsDataURL(file);

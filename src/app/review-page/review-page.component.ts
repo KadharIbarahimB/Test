@@ -17,14 +17,18 @@ export class ReviewPageComponent {
   pre() {
     this.navigateTo('display', 4);
   }
-
+//this is to route to the edit page
   edit(x: number) {
     const routes = ['BasicInfo', 'addressInfo', 'contact', 'display'];
     if (x >= 1 && x <= routes.length) {
       this.navigateTo(routes[x - 1], x);
     }
   }
-
+  private navigateTo(route: string, section: number) {
+    this.router.navigate([route]);
+    this.datashare.setActiveSection(section);
+  }
+//This function to post data to api
   sendDataToApi() {
     const dataToSend = {
       basicDetails: {
@@ -43,8 +47,5 @@ export class ReviewPageComponent {
     );
   }
 
-  private navigateTo(route: string, section: number) {
-    this.router.navigate([route]);
-    this.datashare.setActiveSection(section);
-  }
+ 
 }

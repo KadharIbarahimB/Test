@@ -13,7 +13,7 @@ export class BasicInfoSideComponent {
  
 
   constructor(private router: Router,private datashare:DataShareService) {
- 
+ //this get value from other component when click next and show that current active section
     this.datashare.activeSectionIndex$.subscribe(index => {
       this.activeSectionIndex = index;
     });

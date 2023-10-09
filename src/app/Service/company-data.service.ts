@@ -9,7 +9,7 @@ export class CompanyDataService {
   private baseUrl = 'https://company.dev.zoolwork.com/api/company/companies/companyList';
 
   constructor(private http: HttpClient) {}
-
+//To get api and show company list
   getCompanyList(token: string): Observable<any> {
     const headers = new HttpHeaders({
       'accept': 'text/plain',

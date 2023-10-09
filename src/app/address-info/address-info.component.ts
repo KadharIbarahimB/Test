@@ -55,10 +55,11 @@ isCitySelected(cityCode: string): boolean {
   return this.selectedCities.some(city => city.code === cityCode);
   
 }
-    
+ //this is to show and hide box of permament,Register,Billing address
 NewAddress(){
   this.addaddress=!this.addaddress
  }
+  //this is to hide permament,Register,Billing address
  removeCity(cityCode: string) {
   // Remove the city from the selectedCities array based on its code
   this.selectedCities = this.selectedCities.filter(city => city.code !== cityCode);
@@ -84,11 +85,11 @@ else
   this.datashare.Pstate=this.address.value.Pstate
   this.datashare.Pcountry=this.address.value.Pcountry
   this.datashare.Ppincode=this.address.value.Ppincode
-  this.datashare.setActiveSection(3);
+  this.datashare.setActiveSection(3);//to make next side nav active 
   this.router.navigate(['contact'])
 }
 }
-
+//To go previous page
 pre(){
   
   this.router.navigate(['BasicInfo'])
@@ -96,11 +97,12 @@ pre(){
 }
 latitude: any;
 longitude: any;
-
+//this function to get latitude and longitude of our current location
 getlocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
+        //Top Auto-fill after geting current location
         const latitudeInput = document.getElementById('latitude') as HTMLInputElement;
         const longitudeInput = document.getElementById('longitude') as HTMLInputElement;
 
@@ -118,6 +120,7 @@ getlocation() {
   }
 
 }
+//This function to avoid submitting form by clicking getmylocation
 ngAfterViewInit() {
   const getLocationButton = document.getElementById('get-location');
 
